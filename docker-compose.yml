@@ -1,6 +1,6 @@
 services:
     app:
-        image: ghcr.io/verve-tech/verve-tech:master
+        image: ghcr.io/verve-tech/portfolio:master
         networks:
             - traefik
         labels:
