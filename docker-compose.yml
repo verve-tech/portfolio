@@ -1,0 +1,17 @@
+services:
+    app:
+        image: verve-tech/portfolio:dev
+        build:
+            context: .
+            dockerfile: Dockerfile
+        networks:
+            - traefik
+        labels:
+            - traefik.enable=true
+            - traefik.http.routers.verve-tech.rule=Host(`${APP_DOMAIN:-verve-tech.localhost}`)
+            - traefik.http.routers.verve-tech.entrypoints=web
+            - traefik.http.services.verve-tech-service.loadbalancer.server.port=3000
+
+networks:
+    traefik:
+        external: true
