@@ -1,6 +1,18 @@
 services:
     app:
-        image: verve-tech/portfolio:dev
+        image: ghcr.io/verve-tech/verve-tech:master
+        networks:
+            - traefik
+        labels:
+            - traefik.enable=true
+            - traefik.http.routers.verve-tech.rule=Host(`${APP_DOMAIN:-verve-tech.localhost}`)
+            - traefik.http.routers.verve-tech.entrypoints=websecure
+            - traefik.http.routers.verve-tech.tls=true
+            - traefik.http.routers.verve-tech.tls.certresolver=letsencrypt
+            - traefik.http.services.verve-tech-service.loadbalancer.server.port=3000
+
+    dev:
+        image: verve-tech/portfolio
         build:
             context: .
             dockerfile: Dockerfile
@@ -8,9 +20,9 @@ services:
             - traefik
         labels:
             - traefik.enable=true
-            - traefik.http.routers.verve-tech.rule=Host(`${APP_DOMAIN:-verve-tech.localhost}`)
-            - traefik.http.routers.verve-tech.entrypoints=web
-            - traefik.http.services.verve-tech-service.loadbalancer.server.port=3000
+            - traefik.http.routers.verve-tech-dev.rule=Host(`verve-tech.localhost`)
+            - traefik.http.routers.verve-tech-dev.entrypoints=web
+            - traefik.http.services.verve-tech-dev-service.loadbalancer.server.port=3000
 
 networks:
     traefik:

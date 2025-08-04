@@ -47,3 +47,16 @@ jobs:
                   push: true
                   tags: ${{ steps.docker-meta.outputs.tags }}
                   labels: ${{ steps.docker-meta.outputs.labels }}
+
+            - name: Rollout new version
+              uses: appleboy/ssh-action@v1.2.0
+              with:
+                  host: ${{ secrets.SSH_HOST }}
+                  username: ${{ secrets.SSH_USER }}
+                  key: ${{ secrets.SSH_KEY }}
+                  script: |
+                      export DEBIAN_FRONTEND=noninteractive
+                      set -eu
+
+                      cd projects/${{ github.repository }}
+                      bash scripts/update.sh
