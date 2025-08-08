@@ -64,6 +64,9 @@
   --color-primary: #f7a81c;
   --color-secondary: #f5f5dc;
   --color-custom-black: #151515;
+
+  /* Text */
+  --text-custom-64: 64px;
 }
 
 body {

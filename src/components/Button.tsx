@@ -12,7 +12,7 @@ function Button({ children, ...props }: Props) {
     <Link
       {...props}
       className={cn(
-        'bg-primary text-custom-black block rounded-lg px-7.5 py-4.5 font-extrabold',
+        'bg-primary text-custom-black block w-fit rounded-lg px-7.5 py-4.5 font-extrabold',
         props.className
       )}
     >
