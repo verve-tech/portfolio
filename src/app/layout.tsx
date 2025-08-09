@@ -16,7 +16,7 @@ export default function RootLayout({
     return (
         <html lang="en" className="dark">
             <body
-                className={`${cabinetGrotesk.variable} bg-background text-foreground font-sans antialiased`}
+                className={`${cabinetGrotesk.variable} bg-background text-foreground overflow-x-hidden font-sans antialiased`}
             >
                 <Header />
                 {children}
