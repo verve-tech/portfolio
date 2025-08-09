@@ -44,6 +44,11 @@
     --radius-xl: calc(var(--radius) + 4px);
 }
 
+@theme {
+    --text-heading: 4rem;
+    --text-sub-heading: 2.75rem;
+}
+
 :root {
     --radius: 0.625rem;
     --background: oklch(0.985 0 0);

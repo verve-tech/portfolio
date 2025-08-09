@@ -1,7 +1,7 @@
 import logo from '@/assets/images/logo.svg'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Button } from '../ui/button'
+import LinkButton from '../shared/link-button'
 
 const links = [
     {
@@ -43,7 +43,7 @@ export default function Header() {
                 {links.map((val, idx) => (
                     <Link
                         key={idx}
-                        className="text-xl font-medium"
+                        className="hover:text-primary text-lg font-medium transition-colors duration-300"
                         href={val.link}
                         data-text={val.text}
                     >
@@ -52,12 +52,9 @@ export default function Header() {
                 ))}
             </nav>
 
-            <Button
-                asChild
-                className="ml-auto h-14 rounded-lg border-2 px-8.75 font-extrabold transition-all duration-300 hover:bg-transparent hover:text-white"
-            >
-                <Link href="/">Contact Us</Link>
-            </Button>
+            <LinkButton href="/" className="ml-auto">
+                Contact Us
+            </LinkButton>
         </header>
     )
 }
