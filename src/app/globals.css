@@ -123,5 +123,5 @@
 }
 
 .container {
-    @apply mx-auto w-full max-w-7xl;
+    @apply mx-auto w-full max-w-6xl;
 }

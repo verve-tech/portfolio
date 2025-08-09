@@ -1,3 +1,4 @@
+import Header from '@/components/layout/header'
 import { cabinetGrotesk } from '@/fonts'
 import type { Metadata } from 'next'
 import './globals.css'
@@ -15,8 +16,9 @@ export default function RootLayout({
     return (
         <html lang="en" className="dark">
             <body
-                className={`${cabinetGrotesk.variable} bg-background text-foreground antialiased`}
+                className={`${cabinetGrotesk.variable} bg-background text-foreground font-sans antialiased`}
             >
+                <Header />
                 {children}
             </body>
         </html>
