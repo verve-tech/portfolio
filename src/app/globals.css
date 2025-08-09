@@ -67,6 +67,28 @@
 
   /* Text */
   --text-custom-64: 64px;
+  --text-custom-44: 44px;
+
+  /* Animation */
+  --animate-spin: spin 10s linear infinite;
+  --animate-spin-slow: spin 30s linear infinite;
+  --animate-ball-bounce: ball-bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes ball-bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-12px);
+  }
+  60% {
+    transform: translateY(-6px);
+  }
 }
 
 body {
