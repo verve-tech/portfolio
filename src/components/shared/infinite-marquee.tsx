@@ -12,11 +12,11 @@ interface InfiniteMarqueeProps {
 
 function InfiniteMarquee({ images, from, to, color }: InfiniteMarqueeProps) {
   return (
-    <div className="my-24 flex gap-16.5">
+    <div className="flex gap-16.5">
       <motion.div
         initial={{ x: `${from}` }}
         animate={{ x: `${to}` }}
-        transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
+        transition={{ duration: 100, repeat: Infinity, ease: 'linear' }}
         className="flex flex-shrink-0 gap-16.5"
       >
         {images.map((Component, index) => {
@@ -27,7 +27,7 @@ function InfiniteMarquee({ images, from, to, color }: InfiniteMarqueeProps) {
       <motion.div
         initial={{ x: `${from}` }}
         animate={{ x: `${to}` }}
-        transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
+        transition={{ duration: 100, repeat: Infinity, ease: 'linear' }}
         className="flex flex-shrink-0 gap-16.5"
       >
         {images.map((Component, index) => {
