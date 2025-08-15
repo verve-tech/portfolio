@@ -1,6 +1,7 @@
 import AwardsSection from '@/components/partials/awards-section'
 import HeroSection from '@/components/partials/hero-section'
 import PartnersSection from '@/components/partials/section-partners'
+import ServicesSection from '@/components/partials/section-services'
 import { Fragment } from 'react'
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <HeroSection />
       <AwardsSection />
       <PartnersSection />
+      <ServicesSection />
     </Fragment>
   )
 }
