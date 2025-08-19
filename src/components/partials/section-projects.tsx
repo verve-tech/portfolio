@@ -31,12 +31,13 @@ function ProjectsSection() {
           modules={[Pagination, Autoplay]}
           pagination={{ clickable: true }}
           autoplay={{
-            delay: 1000,
+            delay: 2000,
             disableOnInteraction: false
           }}
           loop={true}
           slidesPerView="auto"
           spaceBetween={20}
+          speed={2000}
         >
           {[...originalSlides, ...originalSlides].map((slide, idx) => (
             <SwiperSlide key={idx} className="w-full max-w-100">
