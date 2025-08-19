@@ -1,6 +1,7 @@
 import Header from '@/components/layout/header'
 import { cabinetGrotesk } from '@/fonts'
 import type { Metadata } from 'next'
+import 'swiper/css'
 import './globals.css'
 
 export const metadata: Metadata = {

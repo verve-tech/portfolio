@@ -129,7 +129,7 @@
   --color-primary: #f7a81c;
   --color-secondary: #f5f5dc;
   --color-custom-black: #151515;
-  --color-paper: #1B1B1B;
+  --color-paper: #1b1b1b;
 
   /* Text */
   --text-custom-64: 64px;
@@ -142,7 +142,7 @@
 }
 
 @utility app-container {
-  @apply mx-auto w-full max-w-6xl;
+  @apply mx-auto w-full max-w-7xl px-5;
 }
 
 @layer base {
@@ -154,7 +154,7 @@
   }
 
   img {
-    @apply select-none;
+    @apply pointer-events-none select-none;
   }
 
   .text-primary {
@@ -176,4 +176,14 @@
   60% {
     transform: translateY(-6px);
   }
+}
+
+.swiper-pagination {
+  @apply mt-6 flex justify-center gap-2;
+}
+.swiper-pagination-bullet {
+  @apply bg-primary/50 h-1 w-8 rounded-2xl transition-all duration-300;
+}
+.swiper-pagination-bullet-active {
+  @apply bg-primary w-16;
 }
