@@ -1,5 +1,6 @@
 'use client'
 
+import RoundedArrow from '@/components/svg/rounded-arrow'
 import Image from 'next/image'
 import { Autoplay, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -63,6 +64,8 @@ function ProjectsSection() {
           ))}
         </Swiper>
       </div>
+
+      <RoundedArrow className="absolute -right-10.5 -bottom-7.75" />
     </section>
   )
 }
