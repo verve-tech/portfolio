@@ -10,7 +10,7 @@ import IconArrow from '../svg/icon-arrow'
 
 function ProjectsSection() {
   return (
-    <section className="relative isolate pt-13.75 pb-35">
+    <section className="relative isolate pt-13.75 pb-17.5">
       <div className="bg-primary absolute top-0 -z-10 h-[60%] w-full" />
 
       <div className="app-container">
@@ -34,14 +34,13 @@ function ProjectsSection() {
             delay: 2000,
             disableOnInteraction: false
           }}
-          loop={true}
           slidesPerView="auto"
           spaceBetween={20}
           speed={2000}
         >
           {[...originalSlides, ...originalSlides].map((slide, idx) => (
-            <SwiperSlide key={idx} className="w-full max-w-100">
-              <div className="bg-paper flex flex-col overflow-hidden rounded-3xl nth-[even]:flex-col-reverse">
+            <SwiperSlide key={idx} className="w-full max-w-100 group">
+              <div className="bg-paper flex flex-col overflow-hidden rounded-3xl group-nth-[even]:flex-col-reverse">
                 <div className="p-6">
                   <div className="mb-8.75 flex items-center gap-5">
                     <div className="w-28 border-t-2 border-white" />

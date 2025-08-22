@@ -3,16 +3,17 @@ import HeroSection from '@/components/partials/hero-section'
 import PartnersSection from '@/components/partials/section-partners'
 import ProjectsSection from '@/components/partials/section-projects'
 import ServicesSection from '@/components/partials/section-services'
-import { Fragment } from 'react'
+import TrustSection from '@/components/partials/section-trust'
 
 export default function Home() {
   return (
-    <Fragment>
+    <main className="overflow-hidden">
       <HeroSection />
       <AwardsSection />
       <PartnersSection />
       <ServicesSection />
       <ProjectsSection />
-    </Fragment>
+      <TrustSection />
+    </main>
   )
 }
