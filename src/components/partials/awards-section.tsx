@@ -10,7 +10,7 @@ export default function AwardsSection() {
     <section className="pt-14.25 pr-[calc(50%-675px)] pb-6">
       <div className="flex relative pr-25">
         <div className="relative">
-          <Image src={awardsImage} alt="Award Image" />
+          <Image src={awardsImage} alt="Award Image" className='rounded-se-custom-40 rounded-ee-custom-40' />
           <div className="absolute -top-14 right-14">
             <div className="animate-spin overflow-hidden rounded-full backdrop-blur-[12px]">
               <CircularText />

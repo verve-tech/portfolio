@@ -75,7 +75,7 @@ function TrustSection() {
   }, [scrollDirection, isInView, controls])
 
   return (
-    <section className="py-17.5 pb-400">
+    <section className="py-17.5">
       <SectionHeader
         subtitle="Award Winning WordPress Agency"
         title={
@@ -90,7 +90,7 @@ function TrustSection() {
         className="scrollbar-hidden pointer-events-none mt-10 overflow-x-auto"
       >
         <motion.div ref={sliderRef} animate={controls} className="flex w-fit gap-4">
-          {[...awardsOne, ...awardsTwo].map((award, index) => (
+          {[...awardsOne, ...awardsOne].map((award, index) => (
             <div
               key={index}
               className={cn(
@@ -109,7 +109,7 @@ function TrustSection() {
         className="scrollbar-hidden pointer-events-none mt-4 overflow-x-auto"
       >
         <motion.div animate={controls} className="flex w-fit justify-end gap-4">
-          {[...awardsOne, ...awardsTwo].map((award, index) => (
+          {[...awardsTwo, ...awardsTwo].map((award, index) => (
             <div
               key={index}
               className={cn(

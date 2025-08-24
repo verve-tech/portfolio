@@ -15,7 +15,7 @@ function ProjectsSection() {
 
       <div className="app-container">
         <div className="mb-13.75 flex items-center justify-between">
-          <h2 className="text-custom-44 text-custom-black max-w-97 leading-[1] font-black uppercase">
+          <h2 className="text-custom-44 text-custom-black max-w-97 leading-custom-1 font-black uppercase">
             Our Recent Projects We Did
           </h2>
 

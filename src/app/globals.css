@@ -42,16 +42,6 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --radius-full-round: 9999px;
-}
-
-@theme {
-  --text-heading: 4rem;
-  --text-sub-heading: 2.75rem;
-
-  --animate-spin-slow: spin 10s linear infinite;
-  --animate-spin-super-slow: spin 30s linear infinite;
-  --animate-ball-bounce: ball-bounce 1.5s ease-in-out infinite;
 }
 
 :root {
@@ -135,11 +125,17 @@
   /* Text */
   --text-custom-64: 64px;
   --text-custom-44: 44px;
+  --text-heading: 4rem;
+  --leading-custom-1: 1;
 
   /* Animation */
   --animate-spin: spin 10s linear infinite;
   --animate-spin-slow: spin 30s linear infinite;
   --animate-ball-bounce: ball-bounce 1.5s ease-in-out infinite;
+
+  /* Radius */
+  --radius-full-round: 9999px;
+  --radius-custom-40: 40px;
 }
 
 @utility app-container {
