@@ -3,6 +3,7 @@ import HeroSection from '@/components/partials/hero-section'
 import PartnersSection from '@/components/partials/section-partners'
 import ProcessSection from '@/components/partials/section-process'
 import ProjectsSection from '@/components/partials/section-projects'
+import ReviewsSection from '@/components/partials/section-reviews'
 import ServicesSection from '@/components/partials/section-services'
 import TrustSection from '@/components/partials/section-trust'
 
@@ -16,6 +17,7 @@ export default function Home() {
       <ProjectsSection />
       <TrustSection />
       <ProcessSection />
+      <ReviewsSection />
     </main>
   )
 }

@@ -132,6 +132,7 @@
   --animate-spin: spin 10s linear infinite;
   --animate-spin-slow: spin 30s linear infinite;
   --animate-ball-bounce: ball-bounce 1.5s ease-in-out infinite;
+  --animate-fadeIn: fadeIn 1s ease-in-out;
 
   /* Radius */
   --radius-full-round: 9999px;
@@ -172,6 +173,15 @@
   }
   60% {
     transform: translateY(-6px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

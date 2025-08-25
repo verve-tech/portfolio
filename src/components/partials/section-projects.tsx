@@ -34,7 +34,7 @@ function ProjectsSection() {
             delay: 2000,
             disableOnInteraction: false
           }}
-          slidesPerView="auto"
+          slidesPerView={1}
           spaceBetween={20}
           speed={2000}
         >
