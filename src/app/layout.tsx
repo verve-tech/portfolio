@@ -3,6 +3,7 @@ import { cabinetGrotesk } from '@/fonts'
 import type { Metadata } from 'next'
 import 'swiper/css'
 // import 'swiper/css/navigation'
+import Footer from '@/components/layout/footer'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={bodyClass}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )
