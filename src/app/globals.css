@@ -93,6 +93,11 @@
     }
   }
 }
+
+.header::before {
+  @apply absolute inset-0 content-[""] lg:hidden block backdrop-blur-xs z-1;
+}
+
 .swiper-pagination {
   @apply mt-6 flex justify-center gap-2;
 }
@@ -106,4 +111,3 @@
   width: 0px;
   height: 0px;
 }
-
