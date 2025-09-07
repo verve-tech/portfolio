@@ -33,12 +33,12 @@ function ReviewSliderButtons() {
   if (!swiper) return null
 
   return (
-    <div className="absolute right-18 bottom-0 z-10 flex">
+    <div className="absolute md:right-18 right-0 md:bottom-0 bottom-1.5 z-10 flex">
       <button
         onClick={() => swiper.slidePrev()}
         disabled={isBeginning}
         className={cn(
-          'custom-prev flex aspect-square w-15 cursor-pointer items-center justify-center rounded-full',
+          'custom-prev flex aspect-square md:w-15 w-10 cursor-pointer items-center justify-center rounded-full',
           isBeginning && 'opacity-50'
         )}
       >
@@ -50,7 +50,7 @@ function ReviewSliderButtons() {
         }}
         disabled={isEnd}
         className={cn(
-          'custom-next bg-primary flex aspect-square w-15 cursor-pointer items-center justify-center rounded-full',
+          'custom-next bg-primary flex aspect-square md:w-15 w-10 cursor-pointer items-center justify-center rounded-full',
           isEnd && 'opacity-50'
         )}
       >

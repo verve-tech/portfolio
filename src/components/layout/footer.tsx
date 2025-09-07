@@ -10,10 +10,17 @@ import IconTwitter from '../svg/icon-twitter'
 function Footer() {
   return (
     <footer className="bg-paper py-10">
-      <div className="app-container flex items-center gap-13">
-        <Image src={logo} height={40} alt={process.env.NEXT_PUBLIC_APP_NAME || 'Company Logo'} />
+      <div className="app-container flex flex-wrap items-center gap-8 xl:gap-13">
+        <div className="basis-full lg:basis-auto">
+          <Image
+            className="mx-auto block lg:mx-0"
+            src={logo}
+            height={40}
+            alt={process.env.NEXT_PUBLIC_APP_NAME || 'Company Logo'}
+          />
+        </div>
 
-        <nav className="flex gap-11">
+        <nav className="flex basis-full justify-center gap-5 lg:basis-auto lg:justify-start xl:gap-11">
           <a
             href="#"
             className="hover:text-primary text-sm font-medium transition-colors duration-300"
@@ -44,7 +51,7 @@ function Footer() {
           </a>
         </nav>
 
-        <div className="ml-auto flex items-center gap-6.25">
+        <div className="ml-auto flex basis-full items-center justify-center gap-5 lg:basis-auto lg:justify-start xl:gap-6.25">
           <a href="#">
             <IconFacebook />
           </a>
@@ -65,7 +72,7 @@ function Footer() {
           </a>
         </div>
 
-        <span className="text-sm font-medium">
+        <span className="basis-full text-center text-sm font-medium lg:basis-auto lg:text-start">
           Copyright {new Date().getFullYear()} | wpcone.com
         </span>
       </div>

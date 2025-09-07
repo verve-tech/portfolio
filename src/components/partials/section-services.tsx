@@ -17,7 +17,7 @@ function ServicesSection() {
           }
         />
 
-        <div className="grid grid-cols-3 gap-5 pt-16">
+        <div className="grid grid-cols-1 gap-5 pt-16 md:grid-cols-2 lg:grid-cols-3">
           {services.map((val, idx) => (
             <ServiceCard
               key={idx}

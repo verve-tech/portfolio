@@ -42,7 +42,9 @@ function TrustSection() {
 
   useEffect(() => {
     if (scrollerTwoRef.current) {
-        scrollerTwoRef.current.scrollTo({left: scrollerTwoRef.current.scrollWidth - scrollerTwoRef.current.offsetWidth})
+      scrollerTwoRef.current.scrollTo({
+        left: scrollerTwoRef.current.scrollWidth - scrollerTwoRef.current.offsetWidth
+      })
     }
   }, [])
 
@@ -65,7 +67,8 @@ function TrustSection() {
         const newScrollPosition = (percent / 100) * maxScrollLeft
 
         scrollerOne.scrollLeft = newScrollPosition * 0.3
-        scrollerTwo.scrollLeft = (scrollerTwo.scrollWidth - scrollerTwo.offsetWidth) - newScrollPosition * 0.3;
+        scrollerTwo.scrollLeft =
+          scrollerTwo.scrollWidth - scrollerTwo.offsetWidth - newScrollPosition * 0.3
       }
     }
     window.addEventListener('scroll', animateSlider)
@@ -87,14 +90,14 @@ function TrustSection() {
 
       <div
         ref={scrollerOneRef}
-        className="scrollbar-hidden pointer-events-none mt-10 overflow-x-auto"
+        className="scrollbar-hidden mt-10 overflow-x-auto"
       >
         <motion.div ref={sliderRef} animate={controls} className="flex w-fit gap-4">
           {[...awardsOne, ...awardsOne].map((award, index) => (
             <div
               key={index}
               className={cn(
-                'rounded-full-round flex items-center px-10.5 py-7.75',
+                'rounded-full-round lg:w-fit min-w-35 flex items-center px-6 py-3 lg:px-10.5 lg:py-7.75 lg:[&_svg]:w-fit [&_svg]:w-full',
                 award.differ ? 'bg-primary' : 'bg-paper'
               )}
             >
@@ -106,14 +109,14 @@ function TrustSection() {
 
       <div
         ref={scrollerTwoRef}
-        className="scrollbar-hidden pointer-events-none mt-4 overflow-x-auto"
+        className="scrollbar-hidden mt-4 overflow-x-auto"
       >
         <motion.div animate={controls} className="flex w-fit justify-end gap-4">
           {[...awardsTwo, ...awardsTwo].map((award, index) => (
             <div
               key={index}
               className={cn(
-                'rounded-full-round flex items-center px-10.5 py-7.75',
+                'rounded-full-round lg:w-fit min-w-35 flex items-center px-6 py-3 lg:px-10.5 lg:py-7.75 lg:[&_svg]:w-fit [&_svg]:w-full',
                 award.differ ? 'bg-primary' : 'bg-paper'
               )}
             >

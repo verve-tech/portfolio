@@ -41,62 +41,61 @@ function ReviewsSection() {
           }
         />
 
-        <div className="mt-13 flex items-center justify-between gap-10">
-          <div className="">
-            <div className="flex items-center justify-center">
-              <div className="relative -rotate-90">
-                <ReviewCurve
-                  className="transition-all duration-2000"
-                  style={{ rotate: `${90 - (360 / count) * activeSlide}deg` }}
-                />
-                {reviews.map((review, i) => {
-                  const angle = (360 / count) * i
-                  return (
-                    <button
-                      key={i}
-                      className="bg-primary absolute flex cursor-pointer items-center justify-center rounded-full text-xs text-white transition-all duration-2000 select-none"
-                      onClick={() => goToSlide(i)}
-                      style={{
-                        width: small,
-                        height: small,
-                        top: '50%',
-                        left: '50%',
-                        marginLeft: -small / 2,
-                        marginTop: -small / 2,
-                        transform: `rotate(${angle - (360 / count) * activeSlide}deg) translate(${radius}px) rotate(-${angle}deg)`
-                      }}
-                    >
-                      <Image
-                        className="transition-all duration-2000"
-                        style={{ rotate: `${90 + (360 / count) * activeSlide}deg` }}
-                        src={review.image}
-                        alt={`${review.name} rating`}
-                      />
-                    </button>
-                  )
-                })}
+        <div className="sm:mt-13 -mt-10 flex flex-col items-center justify-between sm:gap-10 xl:flex-row">
+          <div className="flex aspect-square w-120 scale-70 items-center justify-center sm:scale-100">
+            <div className="relative -rotate-90">
+              <ReviewCurve
+                className="aspect-square transition-all duration-2000"
+                style={{ rotate: `${90 - (360 / count) * activeSlide}deg` }}
+              />
+              {reviews.map((review, i) => {
+                const angle = (360 / count) * i
+                return (
+                  <button
+                    key={i}
+                    className="bg-primary absolute flex cursor-pointer items-center justify-center rounded-full text-xs text-white transition-all duration-2000 select-none"
+                    onClick={() => goToSlide(i)}
+                    style={{
+                      width: small,
+                      height: small,
+                      top: '50%',
+                      left: '50%',
+                      marginLeft: -small / 2,
+                      marginTop: -small / 2,
+                      transform: `rotate(${angle - (360 / count) * activeSlide}deg) translate(${radius}px) rotate(-${angle}deg)`
+                    }}
+                  >
+                    <Image
+                      className="transition-all duration-2000"
+                      style={{ rotate: `${90 + (360 / count) * activeSlide}deg` }}
+                      src={review.image}
+                      alt={`${review.name} rating`}
+                    />
+                  </button>
+                )
+              })}
 
-                <div className="bg-primary absolute inset-0 m-auto aspect-square w-[38%] rotate-90 rounded-full">
-                  {reviews.map((review, index) =>
-                    index === activeSlide ? (
-                      <Image
-                        key={index}
-                        className="animate-fadeIn aspect-square w-full"
-                        src={reviews[activeSlide].image}
-                        alt={`${reviews[activeSlide].name} rating`}
-                      />
-                    ) : (
-                      ''
-                    )
-                  )}
-                  <div className="bg-background absolute top-[32%] right-[-12%] flex aspect-square w-[34%] items-center justify-center rounded-full">
-                    <IconQuote />
-                  </div>
+              <div className="bg-primary absolute inset-0 m-auto aspect-square w-[38%] rotate-90 rounded-full">
+                {reviews.map((review, index) =>
+                  index === activeSlide ? (
+                    <Image
+                      key={index}
+                      className="animate-fadeIn aspect-square w-full"
+                      src={reviews[activeSlide].image}
+                      alt={`${reviews[activeSlide].name} rating`}
+                    />
+                  ) : (
+                    ''
+                  )
+                )}
+                <div className="bg-background absolute top-[32%] right-[-12%] flex aspect-square w-[34%] items-center justify-center rounded-full">
+                  <IconQuote />
                 </div>
               </div>
             </div>
           </div>
-          <div className="max-w-152.5">
+
+          <div className="max-w-[min(610px,100%)] sm:mt-0 -mt-13">
             <Swiper
               ref={swiperRef}
               modules={[Navigation]}
@@ -113,8 +112,8 @@ function ReviewsSection() {
                       <RatingStar key={index} />
                     ))}
                   </div>
-                  <p className="mb-7 text-xl font-medium">“{slide.description}”</p>
-                  <span className="text-2xl font-bold">{slide.name}</span>
+                  <p className="mb-7 text-sm font-medium md:text-xl">“{slide.description}”</p>
+                  <span className="md:text-2xl text-xl font-bold">{slide.name}</span>
                 </SwiperSlide>
               ))}
               <ReviewSliderButtons />

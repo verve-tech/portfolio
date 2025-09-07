@@ -1,4 +1,6 @@
-export default function CircularText() {
+import { ComponentProps } from "react";
+
+export default function CircularText(props: ComponentProps<'svg'>) {
   return (
     <svg
       width="113"
@@ -6,6 +8,7 @@ export default function CircularText() {
       viewBox="0 0 113 113"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <foreignObject x="-24" y="-24" width="161" height="161">
         <div

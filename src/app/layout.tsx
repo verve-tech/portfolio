@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   keywords: (process.env.NEXT_PUBLIC_APP_KEYWORDS ?? '').split(', ')
 }
 
-const bodyClass = `${cabinetGrotesk.variable} bg-background text-foreground overflow-x-hidden font-sans antialiased`
+const bodyClass = `${cabinetGrotesk.variable} max-w-[100vw] font-cabinet-grotesk antialiased min-h-[100vh] flex flex-col`
 
 export default function RootLayout({
   children
@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body className={bodyClass}>
         <Header />
         {children}
