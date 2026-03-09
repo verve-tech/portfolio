@@ -1,8 +1,8 @@
 'use client'
 
-import reviewImageOne from '@/assets/images/review-1.png'
-import reviewImageTwo from '@/assets/images/review-2.png'
-import reviewImageThree from '@/assets/images/review-3.png'
+import reviewImageOne from '@/assets/images/testimonial-1.png'
+import reviewImageTwo from '@/assets/images/testimonial-2.png'
+import reviewImageThree from '@/assets/images/testimonial-3.png'
 import Image from 'next/image'
 import { Fragment, useRef, useState } from 'react'
 import { Navigation } from 'swiper/modules'
@@ -54,7 +54,7 @@ function ReviewsSection() {
                 return (
                   <button
                     key={i}
-                    className="bg-primary absolute flex cursor-pointer items-center justify-center rounded-full text-xs text-white transition-all duration-2000 select-none"
+                    className="absolute flex cursor-pointer items-center justify-center rounded-full text-xs text-white transition-all duration-2000 select-none"
                     onClick={() => goToSlide(i)}
                     style={{
                       width: small,
@@ -76,7 +76,7 @@ function ReviewsSection() {
                 )
               })}
 
-              <div className="bg-primary absolute inset-0 m-auto aspect-square w-[38%] rotate-90 rounded-full">
+              <div className="absolute inset-0 m-auto aspect-square w-[38%] rotate-90 rounded-full">
                 {reviews.map((review, index) =>
                   index === activeSlide ? (
                     <Image
@@ -129,24 +129,24 @@ function ReviewsSection() {
 const reviews = [
   {
     rating: 5,
-    name: 'Michelle Obama',
+    name: 'Emily Carter',
     image: reviewImageOne,
     description:
-      'Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die normale Anordnung von Buchstaben darstellt und somit nach lesbarer Sprache aussieht.'
-  },
-  {
-    rating: 3,
-    name: 'Ariana Grande',
-    image: reviewImageThree,
-    description:
-      'Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die normale Anordnung von Buchstaben darstellt und somit nach lesbarer Sprache aussieht.'
+      'Working with VerveTech was a fantastic experience. Their team quickly understood our product requirements and built a scalable web platform for our startup. Communication was smooth throughout the project, and the final result exceeded our expectations.'
   },
   {
     rating: 4,
-    name: 'Alexander Gibson',
+    name: 'Kwame Mensah',
+    image: reviewImageThree,
+    description:
+      'VerveTech helped us transform our idea into a fully functional mobile application. The developers were highly skilled and delivered the project on time. I especially appreciated their transparency and problem-solving approach.'
+  },
+  {
+    rating: 4,
+    name: 'Javier Morales',
     image: reviewImageTwo,
     description:
-      'Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die normale Anordnung von Buchstaben darstellt und somit nach lesbarer Sprache aussieht.'
+      'We hired VerveTech to develop a custom web application for our business operations. Their team delivered a fast, well-structured platform that improved our workflow significantly. I would definitely work with them again.'
   }
 ]
 

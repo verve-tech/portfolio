@@ -10,7 +10,7 @@ import IconWebApp from '../svg/icon-web-app'
 
 function ServicesSection() {
   return (
-    <section className="pb-35">
+    <section id="services" className="pb-35">
       <div className="app-container">
         <SectionHeader
           subtitle="Our Services"

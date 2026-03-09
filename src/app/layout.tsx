@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    'VerveTech is a software development company building scalable web apps, mobile applications, WordPress websites, and Shopify stores using MERN stack, React Native, and Flutter.',
+    'VerveTech is a software development company building scalable web & mobile apss, WordPress websites, and Shopify stores.',
 
   keywords: [
     'software development company',
@@ -95,6 +95,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+        />
+      </head>
       <body className={bodyClass}>
         <Header />
         {children}
@@ -102,7 +108,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema)
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [organizationSchema, websiteSchema, webpageSchema]
+            })
           }}
         />
       </body>
@@ -125,4 +134,39 @@ const organizationSchema = {
     'https://www.linkedin.com/company/vervetech'
     // 'https://www.upwork.com/agencies/vervetech'
   ]
+}
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'VerveTech',
+  url: siteUrl,
+  description:
+    'VerveTech builds scalable web applications, mobile apps, WordPress websites, and Shopify stores.',
+  publisher: {
+    '@type': 'Organization',
+    name: 'VerveTech',
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteUrl}/logo.png`
+    }
+  }
+}
+
+const webpageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'VerveTech | Web & Mobile App Development Company',
+  url: siteUrl,
+  description:
+    'Custom web and mobile app development using MERN stack, React Native, Flutter, WordPress, and Shopify.',
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'VerveTech',
+    url: siteUrl
+  },
+  about: {
+    '@type': 'Organization',
+    name: 'VerveTech'
+  }
 }

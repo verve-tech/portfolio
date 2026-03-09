@@ -4,19 +4,6 @@ import { cn } from '@/lib/utils'
 import { motion, useAnimation, useInView } from 'framer-motion'
 import { Fragment, useEffect, useRef, useState } from 'react'
 import SectionHeader from '../shared/section-header'
-import AwardOne from '../svg/award-1'
-import AwardTen from '../svg/award-10'
-import AwardEleven from '../svg/award-11'
-import AwardTwelve from '../svg/award-12'
-import AwardThirteen from '../svg/award-13'
-import AwardTwo from '../svg/award-2'
-import AwardThree from '../svg/award-3'
-import AwardFour from '../svg/award-4'
-import AwardFive from '../svg/award-5'
-import AwardSix from '../svg/award-6'
-import AwardSeven from '../svg/award-7'
-import AwardEight from '../svg/award-8'
-import AwardNine from '../svg/award-9'
 
 function TrustSection() {
   const sliderRef = useRef<HTMLDivElement>(null)
@@ -94,11 +81,14 @@ function TrustSection() {
             <div
               key={index}
               className={cn(
-                'rounded-full-round flex min-w-35 items-center px-6 py-3 lg:w-fit lg:px-10.5 lg:py-7.75 [&_svg]:w-full lg:[&_svg]:w-fit',
+                'rounded-full-round flex min-w-fit items-center gap-3 px-6 py-3 lg:w-fit lg:px-8 lg:py-6 [&_svg]:w-full lg:[&_svg]:w-fit',
                 award.differ ? 'bg-primary' : 'bg-paper'
               )}
             >
               {award.icon}
+              <p className={cn('text-lg font-bold', award.differ ? 'text-black' : 'text-white')}>
+                {award.name}
+              </p>
             </div>
           ))}
         </motion.div>
@@ -110,11 +100,14 @@ function TrustSection() {
             <div
               key={index}
               className={cn(
-                'rounded-full-round flex min-w-35 items-center px-6 py-3 lg:w-fit lg:px-10.5 lg:py-7.75 [&_svg]:w-full lg:[&_svg]:w-fit',
+                'rounded-full-round flex min-w-fit items-center gap-3 px-6 py-3 lg:w-fit lg:px-8 lg:py-6 [&_svg]:w-full lg:[&_svg]:w-fit',
                 award.differ ? 'bg-primary' : 'bg-paper'
               )}
             >
               {award.icon}
+              <p className={cn('text-lg font-bold', award.differ ? 'text-black' : 'text-white')}>
+                {award.name}
+              </p>
             </div>
           ))}
         </motion.div>
@@ -126,58 +119,116 @@ function TrustSection() {
 const awardsOne = [
   {
     differ: false,
-    icon: <AwardOne />
+    icon: <i className="devicon-javascript-plain colored text-3xl"></i>,
+    name: 'JavaScript'
   },
   {
     differ: false,
-    icon: <AwardTwo />
+    icon: <i className="devicon-php-plain colored text-3xl"></i>,
+    name: 'PHP'
   },
   {
     differ: false,
-    icon: <AwardThree />
+    icon: <i className="devicon-typescript-plain colored text-3xl"></i>,
+    name: 'TypeScript'
   },
   {
     differ: false,
-    icon: <AwardFour />
+    icon: <i className="devicon-tailwindcss-original colored text-3xl"></i>,
+    name: 'Tailwind'
+  },
+  {
+    differ: false,
+    icon: <i className="devicon-css3-plain colored text-3xl"></i>,
+    name: 'CSS3'
+  },
+  {
+    differ: false,
+    icon: <i className="devicon-html5-plain colored text-3xl"></i>,
+    name: 'HTML5'
   },
   {
     differ: true,
-    icon: <AwardFive />
+    icon: <i className="devicon-sass-original colored text-3xl"></i>,
+    name: 'Sass'
   },
   {
     differ: false,
-    icon: <AwardSix />
+    icon: (
+      <img
+        className="w-7"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+      />
+    ),
+    name: 'Figma'
   }
 ]
 
 const awardsTwo = [
   {
     differ: false,
-    icon: <AwardSeven />
-  },
-  {
-    differ: false,
-    icon: <AwardEight />
+    icon: <i className="devicon-react-plain colored text-3xl"></i>,
+    name: 'React'
   },
   {
     differ: true,
-    icon: <AwardNine />
+    icon: (
+      <img
+        className="w-7"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+      />
+    ),
+    name: 'NextJS'
   },
   {
     differ: false,
-    icon: <AwardTen />
+    icon: (
+      <img
+        className="w-7"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+      />
+    ),
+    name: 'NodeJS'
   },
   {
     differ: false,
-    icon: <AwardEleven />
+    icon: (
+      <img
+        className="w-7"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg"
+      />
+    ),
+    name: 'NestJS'
   },
   {
     differ: false,
-    icon: <AwardTwelve />
+    icon: (
+      <img
+        className="w-7 invert-[1]"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg"
+      />
+    ),
+    name: 'Wordpress'
   },
   {
     differ: false,
-    icon: <AwardThirteen />
+    icon: (
+      <img
+        className="w-7"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg"
+      />
+    ),
+    name: 'Supabase'
+  },
+  {
+    differ: false,
+    icon: (
+      <img
+        className="w-7"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg"
+      />
+    ),
+    name: 'Firebase'
   }
 ]
 
