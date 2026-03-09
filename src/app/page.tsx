@@ -9,7 +9,7 @@ import TrustSection from '@/components/partials/section-trust'
 
 export default function Home() {
   return (
-    <main className="overflow-hidden flex-1">
+    <main className="flex-1 overflow-hidden">
       <HeroSection />
       <AwardsSection />
       <PartnersSection />

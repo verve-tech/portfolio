@@ -80,24 +80,21 @@ function TrustSection() {
   return (
     <section className="py-17.5">
       <SectionHeader
-        subtitle="Award Winning WordPress Agency"
+        subtitle="Our Framework"
         title={
           <Fragment>
-            They Trust <span className="text-primary">Us</span>
+            Technologies & Platforms <span className="text-primary">We Work With</span>
           </Fragment>
         }
       />
 
-      <div
-        ref={scrollerOneRef}
-        className="scrollbar-hidden mt-10 overflow-x-auto"
-      >
+      <div ref={scrollerOneRef} className="scrollbar-hidden mt-10 overflow-x-auto">
         <motion.div ref={sliderRef} animate={controls} className="flex w-fit gap-4">
           {[...awardsOne, ...awardsOne].map((award, index) => (
             <div
               key={index}
               className={cn(
-                'rounded-full-round lg:w-fit min-w-35 flex items-center px-6 py-3 lg:px-10.5 lg:py-7.75 lg:[&_svg]:w-fit [&_svg]:w-full',
+                'rounded-full-round flex min-w-35 items-center px-6 py-3 lg:w-fit lg:px-10.5 lg:py-7.75 [&_svg]:w-full lg:[&_svg]:w-fit',
                 award.differ ? 'bg-primary' : 'bg-paper'
               )}
             >
@@ -107,16 +104,13 @@ function TrustSection() {
         </motion.div>
       </div>
 
-      <div
-        ref={scrollerTwoRef}
-        className="scrollbar-hidden mt-4 overflow-x-auto"
-      >
+      <div ref={scrollerTwoRef} className="scrollbar-hidden mt-4 overflow-x-auto">
         <motion.div animate={controls} className="flex w-fit justify-end gap-4">
           {[...awardsTwo, ...awardsTwo].map((award, index) => (
             <div
               key={index}
               className={cn(
-                'rounded-full-round lg:w-fit min-w-35 flex items-center px-6 py-3 lg:px-10.5 lg:py-7.75 lg:[&_svg]:w-fit [&_svg]:w-full',
+                'rounded-full-round flex min-w-35 items-center px-6 py-3 lg:w-fit lg:px-10.5 lg:py-7.75 [&_svg]:w-full lg:[&_svg]:w-fit',
                 award.differ ? 'bg-primary' : 'bg-paper'
               )}
             >

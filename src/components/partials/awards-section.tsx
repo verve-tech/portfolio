@@ -28,23 +28,23 @@ export default function AwardsSection() {
         <div className="ml-auto flex w-full flex-row gap-4 pt-7.5 pl-10 text-center lg:max-w-83.75 lg:flex-col lg:text-start">
           <div className="flex-1 border-b-white py-7.5 lg:border-b">
             <span className="text-custom-32 md:text-custom-44 block font-black">
-              13<span className="text-primary">+</span>
+              15<span className="text-primary">+</span>
             </span>
-            <span className="block text-sm font-medium md:text-xl">Awards Won</span>
+            <span className="block text-sm font-medium md:text-xl">Technologies Mastered</span>
           </div>
 
           <div className="flex-1 border-b-white py-7.5 lg:border-b">
             <span className="text-custom-32 md:text-custom-44 block font-black">
-              500<span className="text-primary">+</span>
+              50<span className="text-primary">+</span>
             </span>
-            <span className="block text-sm font-medium md:text-xl">Projects Done</span>
+            <span className="block text-sm font-medium md:text-xl">Projects Delivered</span>
           </div>
 
           <div className="flex-1 border-b-white py-7.5 lg:border-b">
             <span className="text-custom-32 md:text-custom-44 block font-black">
-              274<span className="text-primary">+</span>
+              20<span className="text-primary">+</span>
             </span>
-            <span className="block text-sm font-medium md:text-xl">Brands Trust Us</span>
+            <span className="block text-sm font-medium md:text-xl">Happy Clients Worldwide</span>
           </div>
         </div>
 

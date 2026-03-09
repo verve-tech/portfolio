@@ -5,7 +5,6 @@ import Image from 'next/image'
 import { Autoplay, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import projectImage from '../../assets/images/project-1.png'
-import LinkButton from '../shared/link-button'
 import IconArrow from '../svg/icon-arrow'
 
 // Import Swiper styles
@@ -17,17 +16,17 @@ function ProjectsSection() {
       <div className="bg-primary absolute top-0 -z-10 h-[60%] w-full" />
 
       <div className="app-container">
-        <div className="gap-4 mb-14 flex flex-col items-center justify-between text-center sm:flex-row sm:text-start">
-          <h2 className="text-background lg:text-custom-44 text-custom-32 max-w-[13ch] leading-tight font-black uppercase">
-            Our Recent Projects We Did
+        <div className="mb-14 flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-start">
+          <h2 className="text-background lg:text-custom-44 text-custom-32 max-w-[25ch] leading-tight font-black uppercase">
+            Our Recent Software & App Development Projects
           </h2>
 
-          <LinkButton
+          {/* <LinkButton
             href="/"
             className="bg-background hover:text-background text-foreground border-background border-2 hover:bg-transparent sm:ml-auto"
           >
             All Projects
-          </LinkButton>
+          </LinkButton> */}
         </div>
 
         <Swiper
@@ -60,7 +59,7 @@ function ProjectsSection() {
         >
           {originalSlides.map((_, idx) => (
             <SwiperSlide key={idx} className="project-slide">
-              <div className="bg-paper flex h-full flex-col overflow-hidden rounded-3xl shadow-lg transition-shadow duration-300 hover:shadow-xl sm:max-w-full max-w-83.5 mx-auto">
+              <div className="bg-paper mx-auto flex h-full max-w-83.5 flex-col overflow-hidden rounded-3xl shadow-lg transition-shadow duration-300 hover:shadow-xl sm:max-w-full">
                 {idx % 2 !== 0 && (
                   <div className="relative h-48 w-full md:h-56">
                     <Image

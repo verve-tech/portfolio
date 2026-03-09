@@ -2,7 +2,11 @@ import { Fragment } from 'react'
 import SectionHeader from '../shared/section-header'
 import ServiceCard from '../shared/service-card'
 import IconCode from '../svg/icon-code'
+import IconDeployment from '../svg/icon-deployment'
 import IconDesign from '../svg/icon-design'
+import IconMobileApp from '../svg/icon-mobile-app'
+import IconShopify from '../svg/icon-shopify'
+import IconWebApp from '../svg/icon-web-app'
 
 function ServicesSection() {
   return (
@@ -12,7 +16,7 @@ function ServicesSection() {
           subtitle="Our Services"
           title={
             <Fragment>
-              What Do We <span className="text-primary">Provide</span>?
+              What Development Services Do We <span className="text-primary">Provide</span>?
             </Fragment>
           }
         />
@@ -34,40 +38,40 @@ function ServicesSection() {
 
 const services = [
   {
-    icon: IconCode,
-    title: 'Theme Development',
-    description:
-      'You need to get positive results when you spend hard earned marketing and promotions.'
-  },
-  {
-    icon: IconCode,
-    title: 'Plugin Development',
-    description:
-      'You need to get positive results when you spend hard earned marketing and promotions.'
-  },
-  {
-    icon: IconCode,
-    title: 'Ecommerce Site',
-    description:
-      'You need to get positive results when you spend hard earned marketing and promotions.'
-  },
-  {
-    icon: IconCode,
-    title: 'Business Site',
-    description:
-      'You need to get positive results when you spend hard earned marketing and promotions.'
-  },
-  {
-    icon: IconCode,
-    title: 'Custom Coding',
-    description:
-      'You need to get positive results when you spend hard earned marketing and promotions.'
-  },
-  {
     icon: IconDesign,
-    title: 'UI/UX Design',
+    title: 'UI/UX Product Design',
     description:
-      'You need to get positive results when you spend hard earned marketing and promotions.'
+      'Our designers craft intuitive digital experiences that improve usability, increase engagement, and drive product adoption.'
+  },
+  {
+    icon: IconWebApp,
+    title: 'Web App Development',
+    description:
+      'Build scalable web applications using MongoDB, Express, React and Node.js. Our developers create high-performance platforms for startups, SaaS products, and enterprise applications.'
+  },
+  {
+    icon: IconMobileApp,
+    title: 'Mobile App Development',
+    description:
+      'We build cross-platform iOS and Android apps using React Native and Flutter, delivering scalable mobile experiences for startups and businesses.'
+  },
+  {
+    icon: IconCode,
+    title: 'WordPress Development',
+    description:
+      'We design and develop fast, SEO-optimized WordPress websites tailored for businesses, blogs, and eCommerce stores.'
+  },
+  {
+    icon: IconShopify,
+    title: 'Shopify Development',
+    description:
+      'Launch powerful Shopify stores designed to convert visitors into customers. We create custom themes, apps, and scalable eCommerce experiences.'
+  },
+  {
+    icon: IconDeployment,
+    title: 'Deployment & DevOps',
+    description:
+      'We deploy applications to cloud infrastructure with CI/CD pipelines, ensuring secure, fast, and scalable production environments.'
   }
 ]
 

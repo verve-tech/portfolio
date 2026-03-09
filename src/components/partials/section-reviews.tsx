@@ -36,12 +36,13 @@ function ReviewsSection() {
           subtitle="Testimonials"
           title={
             <Fragment>
-              What Our Clients <span className="text-primary">Say</span>?
+              What Our Clients Say About <span className="text-primary">Working</span> With{' '}
+              <span className="text-primary">Us</span>?
             </Fragment>
           }
         />
 
-        <div className="sm:mt-13 -mt-10 flex flex-col items-center justify-between sm:gap-10 xl:flex-row">
+        <div className="-mt-10 flex flex-col items-center justify-between sm:mt-13 sm:gap-10 xl:flex-row">
           <div className="flex aspect-square w-120 scale-70 items-center justify-center sm:scale-100">
             <div className="relative -rotate-90">
               <ReviewCurve
@@ -95,7 +96,7 @@ function ReviewsSection() {
             </div>
           </div>
 
-          <div className="max-w-[min(610px,100%)] sm:mt-0 -mt-13">
+          <div className="-mt-13 max-w-[min(610px,100%)] sm:mt-0">
             <Swiper
               ref={swiperRef}
               modules={[Navigation]}
@@ -113,7 +114,7 @@ function ReviewsSection() {
                     ))}
                   </div>
                   <p className="mb-7 text-sm font-medium md:text-xl">“{slide.description}”</p>
-                  <span className="md:text-2xl text-xl font-bold">{slide.name}</span>
+                  <span className="text-xl font-bold md:text-2xl">{slide.name}</span>
                 </SwiperSlide>
               ))}
               <ReviewSliderButtons />
