@@ -1,16 +1,5 @@
 import type { NextConfig } from 'next'
 
-const nextConfig: NextConfig = {
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.(jsx|tsx)$/,
-      exclude: /node_modules/,
-      enforce: 'pre',
-      use: '@dyad-sh/nextjs-webpack-component-tagger'
-    })
-
-    return config
-  }
-}
+const nextConfig: NextConfig = {}
 
 export default nextConfig
