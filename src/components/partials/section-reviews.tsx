@@ -30,7 +30,7 @@ function ReviewsSection() {
   }
 
   return (
-    <section className="reviews py-17.5">
+    <section id="reviews" className="reviews py-17.5">
       <div className="app-container">
         <SectionHeader
           subtitle="Testimonials"

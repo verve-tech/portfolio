@@ -13,7 +13,7 @@ export default function HeroSection() {
             SaaS platforms to mobile applications, our developers design, build, and deploy
             solutions that scale with your growth.
           </p>
-          <LinkButton href="/contact">Start Your Project</LinkButton>
+          <LinkButton href="#contact">Start Your Project</LinkButton>
         </div>
       </div>
     </section>

@@ -94,7 +94,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         <link
           rel="stylesheet"
@@ -129,11 +129,11 @@ const organizationSchema = {
   description:
     'Software development company offering custom web apps, mobile apps, WordPress websites, Shopify stores, UI/UX design, and deployment services.',
   telephone: '+92-314-9179764',
-  email: 'hello@vervetech.dev',
-  sameAs: [
-    'https://www.linkedin.com/company/vervetech'
-    // 'https://www.upwork.com/agencies/vervetech'
-  ]
+  email: 'hello@vervetech.dev'
+  // sameAs: [
+  //   'https://www.linkedin.com/company/vervetech',
+  //   'https://www.upwork.com/agencies/vervetech'
+  // ]
 }
 
 const websiteSchema = {

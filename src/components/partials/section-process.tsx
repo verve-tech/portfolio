@@ -4,7 +4,7 @@ import Asterisks from '../svg/asterisks'
 
 function ProcessSection() {
   return (
-    <section className="py-17.5 pl-[calc(50%-636px)]">
+    <section id="process" className="py-17.5 pl-[calc(50%-636px)]">
       <div className="flex flex-col justify-between gap-10 pl-5 lg:flex-row">
         <div className="lg:max-w-140">
           <h2 className="text-custom-44 leading-custom-1 mb-10 font-black uppercase">

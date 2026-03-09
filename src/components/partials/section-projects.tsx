@@ -12,7 +12,7 @@ import 'swiper/css'
 
 function ProjectsSection() {
   return (
-    <section className="relative isolate pt-14 pb-16">
+    <section id="projects" className="relative isolate pt-14 pb-16">
       <div className="bg-primary absolute top-0 -z-10 h-[60%] w-full" />
 
       <div className="app-container">

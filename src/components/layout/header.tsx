@@ -14,24 +14,20 @@ const links = [
     link: '#hero'
   },
   {
-    text: 'Plugins',
-    link: '#plugins'
+    text: 'Services',
+    link: '#services'
   },
   {
-    text: 'Themes',
-    link: '#themes'
+    text: 'Projects',
+    link: '#projects'
   },
   {
-    text: 'Templates',
-    link: '#templates'
+    text: 'Process',
+    link: '#process'
   },
   {
-    text: 'Blog',
-    link: '#blog'
-  },
-  {
-    text: 'Support',
-    link: '#support'
+    text: 'Reviews',
+    link: '#reviews'
   }
 ]
 
@@ -41,13 +37,18 @@ export default function Header() {
   const toggleMenu = () => setIsMenuOpen((prev) => !prev)
 
   return (
-    <header className="header isolate app-container flex items-center gap-20 lg:py-12.5 pt-7 pb-3 lg:relative sticky top-0 z-8 bg-background/90">
-      <Image className='relative z-1' src={logo} height={40} alt={process.env.NEXT_PUBLIC_APP_NAME || 'Company Logo'} />
+    <header className="header app-container bg-background/90 sticky top-0 isolate z-8 flex items-center gap-20 pt-7 pb-3 lg:relative lg:py-12.5">
+      <Image
+        className="relative z-1"
+        src={logo}
+        height={40}
+        alt={process.env.NEXT_PUBLIC_APP_NAME || 'Company Logo'}
+      />
 
       <div
         className={cn(
           'bg-background/50 fixed inset-0 z-9',
-          !isMenuOpen ? 'opacity-0 pointer-events-none' : 'opacity-full'
+          !isMenuOpen ? 'pointer-events-none opacity-0' : 'opacity-full'
         )}
         onClick={toggleMenu}
       />
@@ -71,7 +72,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <LinkButton href="/" className="lg:ml-auto">
+        <LinkButton href="#contact" className="lg:ml-auto">
           Contact Us
         </LinkButton>
       </div>

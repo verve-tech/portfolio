@@ -1,5 +1,6 @@
 import AwardsSection from '@/components/partials/awards-section'
 import HeroSection from '@/components/partials/hero-section'
+import ContactSection from '@/components/partials/section-contact'
 import PartnersSection from '@/components/partials/section-partners'
 import ProcessSection from '@/components/partials/section-process'
 import ProjectsSection from '@/components/partials/section-projects'
@@ -18,6 +19,7 @@ export default function Home() {
       <TrustSection />
       <ProcessSection />
       <ReviewsSection />
+      <ContactSection />
     </main>
   )
 }

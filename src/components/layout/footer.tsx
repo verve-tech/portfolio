@@ -63,7 +63,7 @@ function Footer() {
             Terms & Conditions
           </a>
           <a
-            href="#"
+            href="#contact"
             className="hover:text-primary text-sm font-medium transition-colors duration-300"
             data-text="Contact"
           >
