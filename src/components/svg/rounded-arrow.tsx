@@ -1,4 +1,6 @@
-function RoundedArrow() {
+import { ComponentProps } from 'react'
+
+function RoundedArrow(props: ComponentProps<'svg'>) {
   return (
     <svg
       width="167"
@@ -6,6 +8,7 @@ function RoundedArrow() {
       viewBox="0 0 167 146"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <g clipPath="url(#clip0_13_2553)">
         <path
