@@ -4,7 +4,10 @@ import RoundedArrow from '@/components/svg/rounded-arrow'
 import Image from 'next/image'
 import { Autoplay, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import projectImage from '../../assets/images/project-1.png'
+import projectImage1 from '../../assets/images/projects/cucina.jpeg'
+import projectImage2 from '../../assets/images/projects/neowall.jpeg'
+import projectImage3 from '../../assets/images/projects/sutech.jpeg'
+import projectImage4 from '../../assets/images/projects/vpnguider.jpeg'
 import IconArrow from '../svg/icon-arrow'
 
 // Import Swiper styles
@@ -57,44 +60,44 @@ function ProjectsSection() {
           }}
           className="pb-10" // Add padding for pagination
         >
-          {originalSlides.map((_, idx) => (
+          {projects.map((project, idx) => (
             <SwiperSlide key={idx} className="project-slide">
               <div className="bg-paper mx-auto flex h-full max-w-83.5 flex-col overflow-hidden rounded-3xl shadow-lg transition-shadow duration-300 hover:shadow-xl sm:max-w-full">
                 {idx % 2 !== 0 && (
                   <div className="relative h-48 w-full md:h-56">
                     <Image
-                      src={projectImage}
-                      alt="Project showcase"
+                      src={project.img}
+                      alt={project.name}
                       fill
-                      className="object-cover"
+                      className="object-cover aspect-[1600/1200] h-auto"
                     />
                   </div>
                 )}
 
                 <div className="flex-1 p-6">
                   <div className="mb-9 flex items-center gap-5">
-                    <div className="w-10 border-t-2 border-white md:w-28" />
-                    <h3 className="text-2xl font-extrabold">Landing Page UI</h3>
+                    <div className="w-10 border-t-2 border-white md:w-10" />
+                    <h3 className="text-2xl font-extrabold text-primary">{project.name}</h3>
                   </div>
 
                   <div className="flex items-center justify-between gap-10">
                     <span className="block text-sm font-medium md:text-xl">
-                      Nike Landing Page <br /> Website
+                      {project.type} <br /> <span className='text-xs md:text-base font-light'>{project.state}</span>
                     </span>
 
-                    <div className="bg-primary hover:bg-opacity-90 flex aspect-square w-12 items-center justify-center rounded-full transition-colors md:w-16">
+                    <a href={project.link} target='_blank' className="bg-primary hover:bg-opacity-90 flex aspect-square w-12 items-center justify-center rounded-full transition-colors md:w-16">
                       <IconArrow />
-                    </div>
+                    </a>
                   </div>
                 </div>
 
                 {idx % 2 === 0 && (
                   <div className="relative h-48 w-full md:h-56">
                     <Image
-                      src={projectImage}
-                      alt="Project showcase"
+                      src={project.img}
+                      alt={project.name}
                       fill
-                      className="object-cover"
+                      className="object-cover aspect-[1600/1200] h-auto"
                     />
                   </div>
                 )}
@@ -109,13 +112,11 @@ function ProjectsSection() {
   )
 }
 
-const originalSlides = [
-  { id: 1, color: '#ff6b6b' },
-  { id: 2, color: '#feca57' },
-  { id: 3, color: '#1dd1a1' },
-  { id: 4, color: '#54a0ff' },
-  { id: 5, color: '#ff9ff3' },
-  { id: 6, color: '#00d2d3' }
+const projects = [
+  { id: 1, img: projectImage1, name: "Cucina", type: "Food Brand", link: "https://www.cucinafood.nl", state: "Website" },
+  { id: 2, img: projectImage2, name: "Neowall", type: "E-commerce Website", link: "https://neowall.co.uk", state: "Website" },
+  { id: 3, img: projectImage3, name: "Sutech", type: "E-commerce/Retail Store", link: "https://sutechngames.com", state: "Website" },
+  { id: 4, img: projectImage4, name: "VPN Guider", type: "Affiliate Website", link: "http://vpnguider.com", state: "Website/Web App/Mobile App" },
 ]
 
 export default ProjectsSection
